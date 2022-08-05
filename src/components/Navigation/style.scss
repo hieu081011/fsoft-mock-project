@@ -1,0 +1,89 @@
+$main-grey:   #3D464D;
+.Navigation{
+    background-color: #3D464D;
+    width: 225px;
+    color: white;
+    height: 100vh;
+    &__header {
+        color: black;
+        background-color: #FFD333;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 10px;
+        & >div:first-child{
+            font-size: 25px;
+            font-weight: 700;
+        }
+        & >div:last-child{
+            font-size: 10px;
+            background-color: white;
+            border-radius: 5px;
+            width: 40px;
+            padding: 4px 3px;
+            font-weight: 700;
+        }   
+    }
+    &__application{
+        padding: 18px 10px;
+        color: #c4c4c4;
+        font-size: 12px;
+        font-weight: 700;
+    }
+    &__category{
+        &--main{
+            display: flex;
+            justify-content: space-between;
+            padding: 18px 10px;
+            align-items: center;
+            transition-duration: .3s;
+            & >h5,a{
+                flex-grow: 1;
+                text-align: left;
+                font-size: 18px;
+                font-weight: 500;
+                margin-left: 5px;
+
+            }
+            & >span{
+                font-size: 25px;
+            }
+            &:hover{
+                cursor: pointer;
+                background-color: #FFD333;
+            }
+        }
+        &--sub{
+            max-height: 0;
+            overflow: hidden;
+            & >ul{
+                
+                
+                & >li{
+                    
+                    padding: 18px 40px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    transition-duration: .3s;
+                    &:hover{
+                        cursor: pointer;
+                        background-color: #FFD333;
+                    }
+                    
+                }
+            }
+        }
+        & .active-main{
+            & >span:last-child{
+                transform: rotate(90deg);
+            }
+        }
+        & .active-sub{
+            max-height: 500px;
+        }
+        & .active{
+            background-color: #FFD333;
+        }
+    }
+    
+}
