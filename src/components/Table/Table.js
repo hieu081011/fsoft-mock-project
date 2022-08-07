@@ -2,8 +2,8 @@ import React from 'react'
 import './style.scss'
 import { FaSort } from 'react-icons/fa'
 import { FiSearch } from 'react-icons/fi'
-import ProductItem from '../ProductItem/ProductItem'
-import UserItem from '../UserItem/UserItem'
+import ProductItem from '../Product/ProductItem/ProductItem'
+import UserItem from '../User/UserItem/UserItem'
 import Pagination from '../Pagination/Pagination'
 const Table = () => {
     const displayOptions = ['ID', 'User', 'Contact', 'Status', 'Verify Email', 'Verify Contact']
@@ -33,6 +33,13 @@ const Table = () => {
             </div>
             <div className='Table__paginate'>
                 <Pagination />
+                <div >
+                    Items per page
+                    <select>
+                        <option>10</option>
+                        <option>12</option>
+                    </select>
+                </div>
             </div>
         </div>
     </>)

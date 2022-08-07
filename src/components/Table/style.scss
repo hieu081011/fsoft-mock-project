@@ -14,10 +14,10 @@
             & >span{
                 color:  #929395;
                 
-                font-size: 20px;
+                font-size: var(--medium);
             }
             & >input{
-                font-size: 20px;
+                font-size: var(--medium);
                 &::placeholder{
                     color:  #929395;
                 }
@@ -30,9 +30,9 @@
         align-items: center;
         justify-content: space-around;
         padding: 20px 0 40px;
-        border-bottom: 1px solid #929395;
+        
         & >div{
-            font-size: 20px;
+            font-size: var(--medium);
             font-weight: 700;
             display: flex;
             align-items: center;
@@ -42,10 +42,20 @@
             }
             & >span{
             padding-top: 5px;
-            font-size: 22px;
+            font-size: var(--large)
             
             }
         }
         
+    }
+    &__paginate{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        & >div:last-child{
+            display: flex;
+            gap: 10px;
+        }
     }
 }
